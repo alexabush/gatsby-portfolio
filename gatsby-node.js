@@ -54,7 +54,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   //   })
   // })
 
-  const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
+  const blogPostTemplate = path.resolve(`src/templates/blogPost.js`)
 
   return graphql(`
     {
@@ -75,6 +75,12 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
+
+    createPage({
+      path: `/blog`,
+      component: require.resolve("./src/templates/blog.js"),
+      context: { blogPosts: result.data.allMarkdownRemark.edges },
+    })
 
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({

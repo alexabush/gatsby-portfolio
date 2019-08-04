@@ -4,7 +4,7 @@ date: "2019-05-04"
 title: "My first blog post"
 ---
 
-## So What Does Your App Actually Do? AKA It's a CRUD App
+## It's Probably a CRUD App
 
 >The first hour of the Social Network is about making a CRUD app seem like sexy. -Patrick McKenzie
 

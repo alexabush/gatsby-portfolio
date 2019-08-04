@@ -1,25 +1,28 @@
 import React from "react"
-import PropTypes from "prop-types"
+import projectStyles from "./project.module.css"
 
 const Project = ({ imgUrl, appName, description, githubLink, liveLink }) => {
   return (
-    <article>
-      <div>
-        <h2>{appName}</h2>
-        <span className="image">
+    <div className={projectStyles.background}>
+      <article className={projectStyles.project}>
+        <div className={projectStyles.content}>
+          <h2>{appName}</h2>
           <img src={imgUrl} alt={appName} />
-        </span>
-        <div className="content">
-          <p>{description}</p>
+          <div className="content">
+            <p>{description}</p>
+          </div>
+        </div>
+
+        <div className={projectStyles.links}>
           <a href={githubLink}>
-            <button className="display-btn">Github</button>
+            <button className={projectStyles.button}>Github</button>
           </a>
           <a href={liveLink}>
-            <button className="display-btn">Live </button>
+            <button className={projectStyles.button}>Live </button>
           </a>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
   )
 }
 

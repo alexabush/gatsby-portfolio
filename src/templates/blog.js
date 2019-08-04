@@ -1,15 +1,21 @@
 import React from "react"
+import { Link } from "gatsby"
 // import projectStyles from "../components/project.module.css"
 import Layout from "../components/layout"
 
-const Blog = ({ pageContext: { blog } }) => {
-  console.log("porfprops", blog)
+const Blog = ({ pageContext: { blogPosts } }) => {
+  console.log("porfprops", blogPosts)
   return (
     <Layout>
       <div>
-        blogpost
-        {/* <div className={projectStyles.blog}> */}
-        {/* <Blog {...blog} /> */}
+        <h2>Posts</h2>
+        {blogPosts.map(postData => {
+          return (
+            <Link to={postData.node.frontmatter.path}>
+              {postData.node.frontmatter.path}
+            </Link>
+          )
+        })}
       </div>
     </Layout>
   )

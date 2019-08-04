@@ -6,16 +6,16 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import Navbar from ".//Navbar"
 import "./layout.css"
 import layoutStyles from "./layout.module.css"
+import PropTypes from "prop-types"
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div className={layoutStyles.layout}>
       <Navbar />
-      <div className={layoutStyles.layout}>
+      <div className={layoutStyles.content}>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 

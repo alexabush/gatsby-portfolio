@@ -1,4 +1,18 @@
 .header {
   display: grid;
   grid-template-columns: 60% 40%;
+  margin: 0 auto;
+  padding: 1.45rem 1.0875rem;
+}
+
+.headerText {
+  padding-right: 30px;
+}
+
+.headerText h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.headerImage {
 }

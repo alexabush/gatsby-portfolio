@@ -11,9 +11,7 @@ const Projects = ({ pageContext }) => {
   console.log("pagecontext", pageContext)
   return (
     <Layout>
-      <Portfolio projects={pageContext.projectsData}></Portfolio>
-      <Link to="/page-2/">Go to page 2</Link>
-      <Link to="/all-pokemon.js/">SEE SQUIRTLE</Link>
+      <Portfolio projects={pageContext.projects}></Portfolio>
     </Layout>
   )
 }
