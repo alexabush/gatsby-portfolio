@@ -4,10 +4,12 @@ import Project from "./project"
 import portfolioStyles from "./portfolio.module.css"
 
 const Portfolio = props => {
+  console.log("props portfolio", props.projects)
   return (
     <div className={portfolioStyles.portfolio}>
-      {[1, 2, 3, 4, 5, 6].map(project => {
-        return <Project />
+      {props.projects.map(project => {
+        console.log(project)
+        return <Project {...project} />
       })}
     </div>
   )
