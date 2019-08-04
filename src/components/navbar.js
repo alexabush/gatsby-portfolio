@@ -1,14 +1,13 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import navStyles from "./navbar.module.css"
 
 const Navbar = props => {
   return (
     <div className={navStyles.navbar}>
-      <Link to="/page-2/">Home</Link>
-      <Link to="/page-2/">Projects</Link>
-      <Link to="/page-2/">Blog</Link>
+      <Link to="/home">Home</Link>
+      <Link to="/projects">Projects</Link>
+      <Link to="/blog">Blog</Link>
     </div>
   )
 }

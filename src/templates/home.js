@@ -13,7 +13,7 @@ const IndexPage = ({ pageContext }) => {
     <Layout>
       <SEO title="Alex Bush Portfolio" />
       <Header></Header>
-      <Portfolio projects={pageContext.projectsData.projects}></Portfolio>
+      <Portfolio projects={pageContext.projects}></Portfolio>
       <Footer></Footer>
       <Link to="/page-2/">Go to page 2</Link>
       <Link to="/all-pokemon.js/">SEE SQUIRTLE</Link>
