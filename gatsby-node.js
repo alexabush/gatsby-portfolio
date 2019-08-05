@@ -79,14 +79,16 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     createPage({
       path: `/blog`,
       component: require.resolve("./src/templates/blog.js"),
-      context: { blogPosts: result.data.allMarkdownRemark.edges },
+      context: { blogPostUrls: result.data.allMarkdownRemark.edges },
     })
 
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {}, // additional data can be passed via context
+        context: {
+          blogPostUrls: result.data.allMarkdownRemark.edges,
+        }, // additional data can be passed via context
       })
     })
   })

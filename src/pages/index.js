@@ -1,15 +1,11 @@
-import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
+import React, { useEffect } from "react"
+import { navigate } from "gatsby"
 
 const IndexPage = props => {
-  return (
-    <Layout>
-      <Link to="/home">Go Home</Link>
-      <div>Build in auto redirect</div>
-    </Layout>
-  )
+  useEffect(() => {
+    navigate("/home")
+  }, [])
+  return null
 }
 
 export default IndexPage

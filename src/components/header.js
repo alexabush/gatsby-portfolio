@@ -1,6 +1,8 @@
 import React from "react"
 import headerStyles from "./header.module.css"
 import ContactIcons from "./contactIcons.js"
+import Image from "../components/Image"
+
 const Header = props => (
   <header className={headerStyles.header}>
     <div className={headerStyles.headerText}>
@@ -14,12 +16,10 @@ const Header = props => (
         impact on the world.
       </p>
     </div>
-    <div className="header-image">
-      {/* <img
-        src="./src/images/rithm_profile_direct_no_glasses_cropped.png"
-        alt="Profile Picture"
-      /> */}
-      <img src="./src/images/gatsby-astronaut.png" alt="Profile Picture" />
+    <div className={headerStyles.imageContactContainer}>
+      <div className={headerStyles.headerImage}>
+        <Image img="profile" />
+      </div>
       <ContactIcons />
     </div>
   </header>

@@ -2,21 +2,23 @@ import React from "react"
 import { Link } from "gatsby"
 // import projectStyles from "../components/project.module.css"
 import Layout from "../components/layout"
+import Sidebar from "../components/sidebar"
 
-const Blog = ({ pageContext: { blogPosts } }) => {
-  console.log("porfprops", blogPosts)
+const Blog = ({ pageContext: { blogPostUrls } }) => {
   return (
     <Layout>
-      <div>
-        <h2>Posts</h2>
-        {blogPosts.map(postData => {
-          return (
-            <Link to={postData.node.frontmatter.path}>
-              {postData.node.frontmatter.path}
-            </Link>
-          )
-        })}
-      </div>
+      <Sidebar blogPostUrls={blogPostUrls}>
+        <div>
+          <h2>Posts</h2>
+          {blogPostUrls.map(postData => {
+            return (
+              <Link to={postData.node.frontmatter.path}>
+                {postData.node.frontmatter.path}
+              </Link>
+            )
+          })}
+        </div>
+      </Sidebar>
     </Layout>
   )
 }

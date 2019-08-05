@@ -1,12 +1,13 @@
 .layout {
   max-width: 1000px;
+  min-width: 800px;
   margin: auto;
   background: whitesmoke;
   height: 100%;
 }
 
 .content {
-  padding: 0 40px;
+  padding: 20px 40px;
 }
 
 body {

@@ -3,6 +3,7 @@
   grid-template-columns: 60% 40%;
   margin: 0 auto;
   padding: 1.45rem 1.0875rem;
+  padding-bottom: 0px;
 }
 
 .headerText {
@@ -11,8 +12,15 @@
 
 .headerText h1 {
   font-size: 1.8rem;
-  margin: 0;
+  margin-bottom: 5px;
+}
+
+.imageContactContainer {
+  max-width: 250px;
 }
 
 .headerImage {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
 }

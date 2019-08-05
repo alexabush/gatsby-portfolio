@@ -1,6 +1,10 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import LargeAstronaut from "../queries/astronaut"
+import Logo from "../queries/logo"
+import BattleshipImage from "../queries/battleshipImage"
+import ConnectFourImage from "../queries/connectFourImage"
+import SnakeImage from "../queries/snakeImage"
+import ProfilePicture from "../queries/profilePic"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,20 +17,19 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+const Image = ({ img }) => {
+  const images = {
+    LargeAstronaut: <LargeAstronaut />,
+    gatsbyIcon: <Logo />,
+    battleship: <BattleshipImage />,
+    connectFour: <ConnectFourImage />,
+    snake: <SnakeImage />,
+    fitness: <Logo />,
+    language: <Logo />,
+    anki: <Logo />,
+    profile: <ProfilePicture />,
+  }
+  return images[img]
 }
 
 export default Image
