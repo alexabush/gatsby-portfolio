@@ -16,10 +16,34 @@ library.add(faGithub)
 const ContactIcons = props => {
   return (
     <nav className={ContactIconStyles.contactIcons}>
-      <FontAwesomeIcon size="lg" icon={faGithub} />
-      <FontAwesomeIcon size="lg" icon={faLinkedin} />
-      <FontAwesomeIcon size="lg" icon={faEnvelope} />
-      <FontAwesomeIcon size="lg" icon={faFile} />
+      <a
+        className={ContactIconStyles.link}
+        href="https://github.com/alexabush"
+        title="Github"
+      >
+        <FontAwesomeIcon size="lg" icon={faGithub} />
+      </a>
+      <a
+        className={ContactIconStyles.link}
+        href="https://www.linkedin.com/in/alexabush/"
+        title="LinkedIn"
+      >
+        <FontAwesomeIcon size="lg" icon={faLinkedin} />
+      </a>
+      <a
+        className={ContactIconStyles.link}
+        href="mailto:alexabush7@gmail.com"
+        title="Email"
+      >
+        <FontAwesomeIcon size="lg" icon={faEnvelope} />
+      </a>
+      <a
+        className={ContactIconStyles.link}
+        href="https://alex-bush-resume.alexanderbush7.now.sh/"
+        title="Resume"
+      >
+        <FontAwesomeIcon size="lg" icon={faFile} />
+      </a>
     </nav>
   )
 }
