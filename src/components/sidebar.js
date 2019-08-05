@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import sidebarStyles from "../components/sidebar.module.css"
 
 const Sidebar = ({ blogPostUrls, children }) => {
-  console.log("props", blogPostUrls)
   return (
     <div className={sidebarStyles.sidebar}>
       <main>{children}</main>

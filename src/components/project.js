@@ -2,21 +2,16 @@ import React from "react"
 import projectStyles from "./project.module.css"
 import Image from "../components/Image"
 
-const Project = ({
-  name,
-  imgUrl,
-  appName,
-  description,
-  githubLink,
-  liveLink,
-}) => {
+const Project = ({ name, appName, description, githubLink, liveLink }) => {
   return (
     <div className={projectStyles.background}>
       <article className={projectStyles.project}>
         <div className={projectStyles.content}>
           <h2>{appName}</h2>
-          {/* <Image img={name} /> */}
-          <div className="content">
+          <div className={projectStyles.imageContainer}>
+            <Image img={name} />
+          </div>
+          <div className={projectStyles.description}>
             <p>{description}</p>
           </div>
         </div>

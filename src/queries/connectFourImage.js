@@ -7,7 +7,7 @@ export default function LargeAstronaut() {
     query {
       placeholderImage: file(relativePath: { eq: "ConnectFour.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 300, maxHeight: 300) {
             ...GatsbyImageSharpFluid
           }
         }
