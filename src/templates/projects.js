@@ -11,6 +11,7 @@ const Projects = ({ pageContext }) => {
   console.log("pagecontext", pageContext)
   return (
     <Layout>
+      <h1>Projects</h1>
       <Portfolio projects={pageContext.projects}></Portfolio>
     </Layout>
   )

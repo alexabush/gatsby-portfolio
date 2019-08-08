@@ -15,14 +15,12 @@ const Layout = ({ children }) => {
   return (
     <div className={layoutStyles.layout}>
       <Navbar />
-      <div className={layoutStyles.content}>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <main className={layoutStyles.content}>{children}</main>
+      <footer>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </footer>
     </div>
   )
 }

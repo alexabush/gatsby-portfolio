@@ -4,12 +4,26 @@
   margin: auto;
   background: whitesmoke;
   height: 100%;
+  min-height: 100vh;
+  position: relative;
 }
 
 .content {
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.content,
+footer {
   padding: 20px 40px;
 }
 
 body {
   background: darkolivegreen;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
 }

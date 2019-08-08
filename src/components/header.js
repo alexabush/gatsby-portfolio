@@ -6,15 +6,13 @@ import Image from "../components/Image"
 const Header = props => (
   <header className={headerStyles.header}>
     <div className={headerStyles.headerText}>
-      <h1>I'm Alex. I build web apps</h1>
+      <h1>I'm Alex. I build web apps.</h1>
+      <p>Full-stack engineer. Love learning new things and solving problems.</p>
       <p>
-        I'm a software engineer in the Austin passionate about learning new
-        technologies and shipping code.
+        Passion for latest technologies and finding faster, easier, and better
+        ways to get things done.
       </p>
-      <p>
-        Interested in all companies leveraging technology to make a positive
-        impact on the world.
-      </p>
+      <p>Interested in making the world a better place with technology.</p>
     </div>
     <div className={headerStyles.imageContactContainer}>
       <div className={headerStyles.headerImage}>

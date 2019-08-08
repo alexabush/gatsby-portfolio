@@ -6,7 +6,6 @@ const Portfolio = props => {
   return (
     <div className={portfolioStyles.portfolio}>
       {props.projects.map(project => {
-        console.log(project)
         return <Project {...project} />
       })}
     </div>
