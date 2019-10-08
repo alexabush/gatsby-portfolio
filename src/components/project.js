@@ -1,6 +1,8 @@
 import React from "react"
+import Link from "gatsby"
 import projectStyles from "./project.module.css"
 import Image from "../components/Image"
+import Layout from "../components/Layout"
 
 const Project = ({ name, appName, description, githubLink, liveLink }) => {
   return (
@@ -20,9 +22,10 @@ const Project = ({ name, appName, description, githubLink, liveLink }) => {
           <a href={githubLink}>
             <button className={projectStyles.button}>Github</button>
           </a>
-          <a href={liveLink}>
+          {/* <Link to="">{}</Link> */}
+          {/* <a href={liveLink}>
             <button className={projectStyles.button}>Live </button>
-          </a>
+          </a> */}
         </div>
       </article>
     </div>

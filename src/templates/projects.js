@@ -8,7 +8,6 @@ import Portfolio from "../components/Portfolio"
 // each project
 
 const Projects = ({ pageContext }) => {
-  console.log("pagecontext", pageContext)
   return (
     <Layout>
       <h1>Projects</h1>

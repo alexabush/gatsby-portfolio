@@ -8,6 +8,11 @@ const getProjects = async () => {
   return res.data
 }
 
+const getQuotePage = async () => {
+  let res = await axios.get("https://heavy-shop.surge.sh/")
+  return res.data
+}
+
 // const getBlogPosts = async () => {
 //   let res = await axios.get(
 //     "https://alexabush.github.io/portfolio-data/json/blog-data.json"
@@ -18,7 +23,7 @@ const getProjects = async () => {
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const { projects } = await getProjects()
   // const { blogPosts } = await getBlogPosts()
-  console.log(projects)
+  let htmlData = await getQuotePage()
 
   createPage({
     path: `/home`,
@@ -80,6 +85,13 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       path: `/blog`,
       component: require.resolve("./src/templates/blog.js"),
       context: { blogPostUrls: result.data.allMarkdownRemark.edges },
+    })
+    // Queries one big html file
+
+    createPage({
+      path: `/quote`,
+      component: require.resolve("./src/templates/quotePage.js"),
+      context: { html: htmlData },
     })
 
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {

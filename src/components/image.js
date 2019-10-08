@@ -29,7 +29,7 @@ const Image = ({ img }) => {
     anki: <Logo />,
     profile: <ProfilePicture />,
   }
-  return images[img]
+  return images[img] || images["gatsbyIcon"]
 }
 
 export default Image

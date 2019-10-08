@@ -17,6 +17,7 @@ const ContactIcons = props => {
   return (
     <nav className={ContactIconStyles.contactIcons}>
       <a
+        data-cy="github"
         className={ContactIconStyles.link}
         href="https://github.com/alexabush"
         title="Github"
@@ -24,6 +25,7 @@ const ContactIcons = props => {
         <FontAwesomeIcon size="lg" icon={faGithub} />
       </a>
       <a
+        data-cy="linkedin"
         className={ContactIconStyles.link}
         href="https://www.linkedin.com/in/alexabush/"
         title="LinkedIn"
@@ -31,6 +33,7 @@ const ContactIcons = props => {
         <FontAwesomeIcon size="lg" icon={faLinkedin} />
       </a>
       <a
+        data-cy="email"
         className={ContactIconStyles.link}
         href="mailto:alexabush7@gmail.com"
         title="Email"
@@ -38,6 +41,7 @@ const ContactIcons = props => {
         <FontAwesomeIcon size="lg" icon={faEnvelope} />
       </a>
       <a
+        data-cy="resume"
         className={ContactIconStyles.link}
         href="https://alex-bush-resume.alexanderbush7.now.sh/"
         title="Resume"
