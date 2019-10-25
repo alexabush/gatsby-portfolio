@@ -1,6 +1,6 @@
 import React from "react"
 import projectStyles from "./project.module.css"
-import Image from "../components/Image"
+import Image from "../components/image"
 
 const Project = ({ name, appName, description, githubLink, liveLink }) => {
   return (

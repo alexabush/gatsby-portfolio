@@ -6,10 +6,10 @@
  */
 
 import React from "react"
-import Navbar from ".//Navbar"
+import Navbar from "./navbar"
+import PropTypes from "prop-types"
 import "./layout.css"
 import layoutStyles from "./layout.module.css"
-import PropTypes from "prop-types"
 
 const Layout = ({ children }) => {
   return (

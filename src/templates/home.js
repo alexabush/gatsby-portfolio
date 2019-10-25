@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Header from "../components/Header"
-import Portfolio from "../components/Portfolio"
-import Footer from "../components/Footer"
+import Header from "../components/header"
+import Portfolio from "../components/portfolio"
+import Footer from "../components/footer"
 import ErrorBoundary from "../components/ErrorBoundary"
 
 const IndexPage = ({ pageContext }) => {
