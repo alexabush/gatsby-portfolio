@@ -1,7 +1,7 @@
 import React from "react"
 import headerStyles from "./header.module.css"
 import ContactIcons from "./contactIcons.js"
-import Image from "../components/Image"
+import Image from "../components/image"
 
 const Header = props => (
   <header className={headerStyles.header}>
