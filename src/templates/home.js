@@ -4,18 +4,23 @@ import SEO from "../components/seo"
 import Header from "../components/Header"
 import Portfolio from "../components/Portfolio"
 import Footer from "../components/Footer"
+import ErrorBoundary from "../components/ErrorBoundary"
 
 const IndexPage = ({ pageContext }) => {
   return (
-    <Layout>
-      <SEO title="Alex Bush Portfolio" />
-      <Header />
-      <div>
-        <h3>Portfolio</h3>
-        <Portfolio projects={pageContext.projects} />
-      </div>
-      <Footer />
-    </Layout>
+    <ErrorBoundary componentName="IndexPage">
+      <Layout>
+        <SEO title="Alex Bush Portfolio" />
+        <Header />
+        <div>
+          <h3>Portfolio</h3>
+          <ErrorBoundary componentName="portfolio in index page">
+            <Portfolio projects={pageContext.projects} />
+          </ErrorBoundary>
+        </div>
+        <Footer />
+      </Layout>
+    </ErrorBoundary>
   )
 }
 
